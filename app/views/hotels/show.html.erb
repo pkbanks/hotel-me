@@ -1,3 +1,12 @@
 <!-- app/views/hotels/show.html.erb -->
 <%= link_to "Hotels", hotels_path %>
 <h1><%= @hotel %></h1>
+
+<h3>Rooms</h3>
+
+<% @hotel.rooms.each do |room| %>
+  <div>Room: <%= room.room_number %></div>
+  <div>Beds: <%= room.beds %></div>
+  <div><%= image_tag room.photo_url, width: 500 %></div>
+  <hr>
+<% end %>
