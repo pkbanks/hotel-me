@@ -5,8 +5,17 @@ class HotelsController < ApplicationController
               #     controllers are called 'actions'
               
     # deliver a list of hotels
-
+    @hotels = Hotel.all
 
   end
 
+  def show
+    @hotel = Hotel.find(params[:id])
+  end
+
 end
+
+
+
+
+

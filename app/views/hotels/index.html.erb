@@ -1,0 +1,7 @@
+<!-- app/views/hotels/index.html.erb -->
+
+<h1>Hotels</h1>
+
+<% @hotels.each do |hotel| %>
+  <div><%= link_to "#{hotel} (#{hotel.location})", hotel_path(hotel) %></div>
+<% end %>
